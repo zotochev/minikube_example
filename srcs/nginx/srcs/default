@@ -1,0 +1,30 @@
+server {
+    listen 80;
+    server_name _;
+    return 301 https://$host$request_uri;
+}
+
+server {
+        listen                  443 ssl;
+        ssl_certificate         /etc/ssl/nginx.crt;
+        ssl_certificate_key     /etc/ssl/nginx.key;
+
+        error_page 497 https://$host$request_uri;
+
+        location / {
+            root   /usr/share/nginx/html;
+            index  index_0.html;
+        }
+
+        location /tornado_redirect/ {
+            proxy_pass      http://192.168.59.3:8888/;
+            proxy_set_header X-Forwarded-Proto  https;
+            proxy_set_header        X-Real-IP $remote_addr;
+            proxy_redirect          / /tornado_redirect;
+        }
+
+        location /tornado {
+                return 307          http://192.168.59.3:8888;
+        }
+
+}

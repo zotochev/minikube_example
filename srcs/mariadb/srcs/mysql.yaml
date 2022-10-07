@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  labels:
+    app: mysql
+spec:
+  ports:
+    - port: 3306
+  selector:
+    app: mysql
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  labels:
+    app: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+#      - image: mariadb
+      - image: mysql_image
+        name: mysql
+        imagePullPolicy: Never
+        env:
+        - name: 'MARIADB_ROOT_PASSWORD'
+          value: '123'
+        - name: 'MARIADB_USER'
+          value: 'example-user'
+        - name: 'MARIADB_PASSWORD'
+          value: '123'
+
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql
+          mountPath: "var/lib/mysql"
+      volumes:
+        - name: mysql
+          persistentVolumeClaim:
+            claimName: pvc-mysql
