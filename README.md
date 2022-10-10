@@ -23,7 +23,7 @@ graph TD
 * docker 
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [minikube](https://minikube.sigs.k8s.io/docs/start/)
-* [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
+* kubectl [install](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/) or [alias](https://minikube.sigs.k8s.io/docs/handbook/kubectl/)
 
 ## To Do
 * [elk stack logging](https://www.elastic.co/what-is/elk-stack)
