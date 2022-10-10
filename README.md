@@ -31,5 +31,5 @@ graph TD
     * [two](https://www.weave.works/blog/kubernetes-observability-log-aggregation-using-elk-stack)
     * [three](https://coralogix.com/blog/kubernetes-logging-with-elasticsearch-fluentd-and-kibana/)
 * postgres database
-* move out of minikube environment: ['faq']([https://minikube.sigs.k8s.io/docs/faq/](https://minikube.sigs.k8s.io/docs/faq/#how-can-i-access-a-minikube-cluster-from-a-remote-network))
+* move out of minikube environment: [faq]([https://minikube.sigs.k8s.io/docs/faq/](https://minikube.sigs.k8s.io/docs/faq/#how-can-i-access-a-minikube-cluster-from-a-remote-network))
     * minikube’s primary goal is to quickly set up local Kubernetes clusters, and therefore ⚠️**we strongly discourage using minikube in production**⚠️
