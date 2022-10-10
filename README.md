@@ -14,6 +14,10 @@ graph TD
 
     D <--> id1[(mariadb Database)]
 ```
+## Start
+```bash
+./setup.sh
+```
 
 ## Requirements
 * docker 
