@@ -26,5 +26,8 @@ graph TD
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
 
 ## To Do
-* [elk stack logging](https://www.elastic.co/blog/kubernetes-observability-tutorial-k8s-log-monitoring-and-analysis-elastic-stack)
+* [elk stack logging](https://www.elastic.co/what-is/elk-stack)
+    * [one](https://www.elastic.co/blog/kubernetes-observability-tutorial-k8s-log-monitoring-and-analysis-elastic-stack)
+    * [two](https://www.weave.works/blog/kubernetes-observability-log-aggregation-using-elk-stack)
+    * [three](https://coralogix.com/blog/kubernetes-logging-with-elasticsearch-fluentd-and-kibana/)
 * postgres database
