@@ -1,5 +1,7 @@
 # minikube_example
-
+`http://192.168.59.3:8888/` - tornado service  
+`http://192.168.59.2:80` - http version of nginx (redirects to https)  
+`https://192.168.59.2:443`  - https version of nginx  
 ## Requirements
 * docker 
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads)
