@@ -5,6 +5,16 @@
 `http://192.168.59.2:80` - http version of nginx (redirects to https)  
 `https://192.168.59.2:443`  - https version of nginx  
 
+```mermaid
+graph TD
+    A[LoadBalancer] -->|request| C{Nginx}
+    C --> D[Tornado service]
+    C --> E[Other service]
+    C --> F[Other service]
+
+    D <--> id1[(mariadb Database)]
+```
+
 ## Requirements
 * docker 
 * [virtualbox](https://www.virtualbox.org/wiki/Downloads)
