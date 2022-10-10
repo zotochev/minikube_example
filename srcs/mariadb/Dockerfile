@@ -6,9 +6,12 @@ FROM mariadb
 #   --env MARIADB_ROOT_PASSWORD=my-secret-pw \
 #   mariadb:latest
 
-# password here for demonstration purpose
-RUN mysql -u root -p123 -e "create database counter_db;"
+# docker run -it --rm -v /home/mikhail/PycharmProjects/minikube_example/srcs/mariadb/srcs/init.sql:/init.sql:z --env MARIADB_ROOT_PASSWORD=123 --env MARIADB_USER=example-user --env MARIADB_PASSWORD=123 mysql_image --init-file=/init.sql
+
+#COPY srcs/start.sh .
+COPY srcs/init.sql /docker-entrypoint-initdb.d/init0.sql
 
 VOLUME	["/sys/fs/cgroup"]
 
 CMD ["mariadbd"]
+#CMD ["sh", "start.sh"]

@@ -11,6 +11,7 @@ spec:
     app: mysql
   type: ClusterIP
 ---
+# Remake to StatefulSet
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,7 +29,6 @@ spec:
         app: mysql
     spec:
       containers:
-#      - image: mariadb
       - image: mysql_image
         name: mysql
         imagePullPolicy: Never
