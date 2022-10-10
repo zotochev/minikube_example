@@ -2,8 +2,10 @@
 
 
 minikube delete
-#minikube start
 minikube start --driver=virtualbox
+
+#For access a minikube cluster from a remote network
+#minikube start --driver=virtualbox --listen-address=0.0.0.0
 
 minikube addons enable metallb
 
