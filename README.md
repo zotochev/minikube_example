@@ -31,3 +31,4 @@ graph TD
     * [two](https://www.weave.works/blog/kubernetes-observability-log-aggregation-using-elk-stack)
     * [three](https://coralogix.com/blog/kubernetes-logging-with-elasticsearch-fluentd-and-kibana/)
 * postgres database
+* move out of minikube environment
