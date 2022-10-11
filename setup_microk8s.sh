@@ -5,7 +5,7 @@ microk8s dashboard-proxy
 
 alias kubectl='microk8s kubectl'
 
-microk8s enable metallb
+microk8s enable metallb:192.168.59.2-192.168.59.250
 microk8s enable dns
 
 kubectl apply -f docker_config.yaml
