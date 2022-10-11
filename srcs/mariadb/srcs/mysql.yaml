@@ -29,9 +29,9 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql_image
+      - image: zotochev/mysql_image
         name: mysql
-        imagePullPolicy: Never
+          # imagePullPolicy: Never
         env:
         - name: 'MARIADB_ROOT_PASSWORD'
           value: '123'
@@ -45,6 +45,8 @@ spec:
         volumeMounts:
         - name: mysql
           mountPath: "var/lib/mysql"
+      imagePullSecrets:
+        - name: regcred
       volumes:
         - name: mysql
           persistentVolumeClaim:

@@ -36,7 +36,9 @@ spec:
     spec:
       containers:
         - name: tornado
-          image: image_tornado_0
-          imagePullPolicy: Never
+          image: zotochev/image_tornado_0
+            #imagePullPolicy: Never
           ports:
             - containerPort: 8888
+      imagePullSecrets:
+        - name: regcred
